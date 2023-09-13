@@ -53,24 +53,85 @@ function catAndMouse(cat1,mouse, cat2) {
     return "cat1";
   }
 }
-console.log(catAndMouse(10,15,15));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let newarray=[];
+  for(let i=0;i<array.length;i+=1){
+    if(array[i]%3 === 0 && array[i]%5==0){
+      newarray.push('fizzBuzz');
+    } else if (array[i]%3 === 0){
+      newarray.push('fizz');
+    } else if (array[i]%5 === 0){
+      newarray.push('buzz');
+    }
+    else{
+      newarray.push('bug!');
+    }
+  }
+  return newarray;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  let array = phrase.split('')
+  for(let i=0;i<array.length;i+=1){
+    switch(array[i]){
+      case 'a':
+        array[i]= 1;
+        break;
+      case 'e':
+        array[i]= 2;
+        break;
+      case 'i':
+        array[i]= 3;
+        break;
+      case 'o':
+        array[i]= 4;
+        break;
+      case 'u':
+        array[i]= 5;
+        break;
+    }
+  }
+  let message = array.join('');
+  return message;
 }
-function decode() {
-  // seu código aqui
+
+function decode(phrase) {
+  let array = phrase.split('')
+  for(let i=0;i<array.length;i+=1){
+    switch(array[i]){
+      case '1':
+        array[i]= 'a';
+        break;
+      case '2':
+        array[i]= 'e';
+        break;
+      case '3':
+        array[i]= 'i';
+        break;
+      case '4':
+        array[i]= 'o';
+        break;
+      case '5':
+        array[i]= 'u';
+        break;
+    }
+  }
+  let message = array.join('');
+  return message;
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arrayTech,name) {
+  if(!arrayTech.length) return 'Vazio!';
+  arrayTech.sort();
+  const resultado = [];
+  for(let i=0;i<arrayTech.length;i+=1){
+    resultado.push({tech:arrayTech[i],name:name});
+  }
+  return resultado;
 }
 
 module.exports = {
