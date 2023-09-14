@@ -6,7 +6,6 @@ function compareTrue(value1,value2) {
     return false;
   }
 }
-
 // Desafio 2
 function calcArea(base,height) {
   return (base * height) / 2
@@ -45,9 +44,9 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse(cat1,mouse, cat2) {
-  if(mouse - cat1 === mouse-cat2) return 'os gatos trombam e o rato foge'; 
-  if((cat1-mouse)>(cat2-mouse)){
+function catAndMouse(mouse,cat1, cat2) {
+  if(cat1-mouse === cat2-mouse) return 'os gatos trombam e o rato foge'; 
+  if(cat2>mouse && cat2<cat1){
     return "cat2";
   } else {
     return "cat1";
