@@ -6,7 +6,8 @@ function generatePhoneNumber(array) {
     const number = array[i];
     if(array[i]<0||array[i]>9) return "não é possível gerar um número de telefone com esses valores";
     if(count[number]>=2) return "não é possível gerar um número de telefone com esses valores"; // Não entendi
-    count[number] = (count[number]||0)+1; // tem como criar chaves e ao mesmo tempo atribuir valor a ela
+    count[number] = (count[number]||0)+1; // Cria a chave e atribui valor a ela ao mesmo tempo
+  }
   return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`
 }
 // Desafio 12
